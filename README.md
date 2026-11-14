@@ -13,6 +13,12 @@ Zed already existed for this language, the same editor-parity goal
 (setq openppl-ts-mode-registry-path "/path/to/openppl/registry") ; required
 ```
 
+**Not published to MELPA (or any other package archive).** This repo
+is pushed to `github.com/MrPoloGit/emacs-openppl`, usable today via
+`straight.el`/`use-package :vc`/`package-vc-install` pointing at that
+URL, or the manual `load-path` above, but it hasn't been submitted to
+MELPA, nothing has an MELPA recipe yet.
+
 ## What's implemented (L0, highlighting)
 
 - `.ohf` → `openppl-ts-mode` via `auto-mode-alist`.
@@ -42,6 +48,12 @@ Zed already existed for this language, the same editor-parity goal
 **Grammar binary is bundled**, macOS arm64 only, same provenance and
 caveat as `emacs-phh`/`emacs-ohh`: `parser/libtree-sitter-openppl.dylib`
 is `nvim-openppl/parser/openppl.so`, renamed and re-confirmed to load.
+On another platform, rebuild it yourself the same way:
+
+```sh
+tree-sitter build ../tree-sitter-openppl -o parser/libtree-sitter-openppl.so   # Linux
+tree-sitter build ../tree-sitter-openppl -o parser/libtree-sitter-openppl.dll  # Windows
+```
 
 ## What's implemented (L1, diagnostics, hover, completion)
 
