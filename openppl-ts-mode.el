@@ -37,7 +37,7 @@
   :group 'openppl)
 
 (defcustom openppl-ts-mode-registry-path nil
-  "Path to the openppl/registry directory.
+  "Path to the openppl-data/registry directory.
 
 openppl-ls requires this as its first CLI argument (it has no built-in
 default, same \"never approximate silently\" reasoning as

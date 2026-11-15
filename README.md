@@ -10,7 +10,7 @@ Zed already existed for this language, the same editor-parity goal
 ```elisp
 (add-to-list 'load-path "/path/to/emacs-openppl")
 (require 'openppl-ts-mode)
-(setq openppl-ts-mode-registry-path "/path/to/openppl/registry") ; required
+(setq openppl-ts-mode-registry-path "/path/to/openppl-data/registry") ; required
 ```
 
 **Not published to MELPA (or any other package archive).** This repo
@@ -66,9 +66,9 @@ interactive `eglot` handshake.
 ## How this was verified
 
 `test/openppl-ts-mode-tests.el` (ERT) checks real faces at real
-corpus positions in `openppl/corpus/valid/operators.ohf`, `WHEN`/
+corpus positions in `openppl-data/corpus/valid/operators.ohf`, `WHEN`/
 `RETURN` keywords, a generic lowercase identifier (`betround`, a native
-OpenHoldem engine symbol this registry deliberately doesn't cover, see `openppl/registry/README.md`), an action-field identifier (`Call`),
+OpenHoldem engine symbol this registry deliberately doesn't cover, see `openppl-data/registry/README.md`), an action-field identifier (`Call`),
 a comparison operator, a `hand$AA` expression, a comment, and a section
 header's name, plus the Imenu section list. **All 10 checks pass.**
 Byte-compiles with zero warnings.

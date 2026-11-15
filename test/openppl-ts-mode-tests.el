@@ -12,7 +12,7 @@
 (defconst openppl-ts-mode-tests--dir
   (file-name-directory (or load-file-name buffer-file-name)))
 (defconst openppl-ts-mode-tests--corpus-file
-  (expand-file-name "../../openppl/corpus/valid/operators.ohf" openppl-ts-mode-tests--dir))
+  (expand-file-name "../../openppl-data/corpus/valid/operators.ohf" openppl-ts-mode-tests--dir))
 
 (defun openppl-ts-mode-tests--face-at (needle)
   "Visit the corpus fixture, fontify it, and return the face at NEEDLE's
